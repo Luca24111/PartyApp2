@@ -1,0 +1,72 @@
+
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid ">
+    <i class="fa-brands fa-slack fa-xl"></i>
+    <a class="navbar-brand text-center" href="#">PartyApp</a>
+
+        <button class="btn-hamburger pe-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </button>
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">PartyApp</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        {% if app.user %}
+            <div class="d-grid gap-2 container-fluid ">
+
+                <button class="btn text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/'">
+                    <i class="fa-solid fa-house pt-1 ps-2"></i>
+                    <div class="container">Home</div> 
+                </button>
+
+                <button class="btn text-center d-flex" type="button" onclick="location.href='http://party_app.copiaincolla/user'">
+                    <i class="fa-solid fa-user pt-1 ps-2"></i>
+                    <div class="container">Account</div> 
+                </button>
+
+                {% if app.user.roles[0] == 'ROLE_ADMIN' %}
+
+                    <button class="btn text-center d-flex" type="button" onclick="location.href='http://party_app.copiaincolla/admin'">
+                        <i class="fa-solid fa-user pt-1 ps-2"></i>
+                        <div class="container">Admin Dashboard</div> 
+                    </button>
+
+                {% endif %}
+
+                <button class="btn text-center d-flex" type="button" onclick="location.href='/{{ app.user ? 'logout' : 'login'}}'">
+                    <i class="fa-solid fa-right-from-bracket pt-1 ps-2"></i>
+                    <div class="container">Logout</div>
+                </button>
+
+            </div>
+        {% else %}
+            <div class="d-grid gap-2 container-fluid">
+                <button class="btn text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
+                    <i class="fa-solid fa-address-card pt-1 ps-2"></i>
+                    <div class="container">Registrati</div> 
+                </button>
+
+                <button class="btn text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/login'">
+                    <i class="fa-solid fa-right-to-bracket pt-1 ps-2"></i>
+                    <div class="container">Accedi</div> 
+                </button>
+            </div>
+        {% endif %} 
+    </div>
+</div>
+
+
+  </div> 
+ 
+        
+  </div>
+</nav>
+
+
+
+
+

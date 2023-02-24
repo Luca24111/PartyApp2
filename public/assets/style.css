@@ -1,0 +1,26 @@
+
+.btn:hover{
+    color: rgb(242, 8, 78) !important;
+    border-color: rgb(242, 8, 78) !important;
+}
+
+.navbar-toggler{
+    border: none !important;
+    color:none !important;
+    box-sizing: none !important;
+}
+
+.btn-hamburger{
+    border: none !important;
+    color:none !important;
+    background-color: transparent !important;
+
+}
+
+.btn-close{
+    border: none !important;
+    color:none !important;
+    background-color: transparent !important;
+}
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, 
+        {label: 'Password'})
+        }}
+        {{ form_row(registrationForm.fullName,
+        {label: 'Nome'})
+        }}
+        {{ form_row(registrationForm.agreeTerms) }}
+        
+
+        <button type="submit" class="btn">Register</button>
+        
+        <button class="btn btn-primary text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/login'">
+            <i class="fa-solid fa-right-to-bracket pt-1 ps-2"></i>
+            <div class="container">Accedi</div> 
+        </button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
