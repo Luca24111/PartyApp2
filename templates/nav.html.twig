@@ -4,12 +4,13 @@
     <i class="fa-brands fa-slack fa-xl"></i>
     <a class="navbar-brand text-center" href="#">PartyApp</a>
 
-        <button class="btn-hamburger pe-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+       <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <i class="fa-solid fa-bars fa-xl"></i>
-        </button>
-        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-        
-    <div class="offcanvas-header">
+       </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-body">
+                    <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">PartyApp</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
     </div>
@@ -31,7 +32,7 @@
                 {% if app.user.roles[0] == 'ROLE_ADMIN' %}
 
                     <button class="btn text-center d-flex" type="button" onclick="location.href='http://party_app.copiaincolla/admin'">
-                        <i class="fa-solid fa-user pt-1 ps-2"></i>
+                        <i class="fa-solid fa-dashboard pt-1 ps-2"></i>
                         <div class="container">Admin Dashboard</div> 
                     </button>
 
@@ -55,16 +56,26 @@
                     <div class="container">Accedi</div> 
                 </button>
             </div>
-        {% endif %} 
+        {% endif %}
+            </div>
+        </div>
+        
+     
     </div>
 </div>
-
-
-  </div> 
+</div> 
  
         
   </div>
 </nav>
+
+
+
+
+ {# <button class="btn-hamburger pe-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </button>
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel"> #}
 
 
 

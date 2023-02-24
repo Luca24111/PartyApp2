@@ -44,8 +44,8 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('fullName', TextType::class, ['required' => false])
-        ;
+            ->add('nome', TextType::class, ['required' => false])
+            ->add('cognome', TextType::class, ['required' => false]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

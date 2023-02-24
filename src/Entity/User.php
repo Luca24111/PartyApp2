@@ -30,7 +30,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $fullName = null;
+    private ?string $nome = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $cognome = null;
+
+    #[ORM\Column]
+    private ?\DateTimeImmutable $createdAt = null;
 
     public function getId(): ?int
     {
@@ -102,15 +108,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getFullName(): ?string
+    public function getNome(): ?string
     {
-        return $this->fullName;
+        return $this->nome;
     }
 
-    public function setFullName(string $fullName): self
+    public function setNome(string $nome): self
     {
-        $this->fullName = $fullName;
+        $this->nome = $nome;
 
         return $this;
     }
+
+    public function getCognome(): ?string
+    {
+        return $this->cognome;
+    }
+
+    public function setCognome(string $cognome): self
+    {
+        $this->cognome = $cognome;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
 }
