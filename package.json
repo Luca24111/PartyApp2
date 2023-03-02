@@ -1,0 +1,25 @@
+{
+  "name": "party_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luca24111/PartyApp2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luca24111/PartyApp2/issues"
+  },
+  "homepage": "https://github.com/Luca24111/PartyApp2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

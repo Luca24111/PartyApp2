@@ -4,6 +4,58 @@
 
 {% block body %}
 {% include 'nav.html.twig' %}
+ <div class="container-fluid vh bg-black">
 
+            {# TIMER-CONTAINER #}
+    <div class="timer-container d-flex">
+        <div class="timer-box d-flex align-items-center justify-content-around">
+            <div class="time-box text-center">
+                <h4>00</h4>
+                <p>Giorni</p>
+            </div>
+            <div class="time-box text-center">
+                <h4>00</h4>
+                <p>Ore</p>
+            </div>
+            <div class="time-box text-center">
+                <h4>00</h4>
+                <p>Minuti</p>
+            </div>
+        </div>
+    </div>
+            {# TIMER-CONTAINER #}
+
+            {# CARDS-CONTAINER #}
+    <div class="card-container d-flex align-items-center justify-content-around">
+
+            {# CARD-1 #}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body bg-black">
+                <h5 class="card-title">15€</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                    <div class="container">Acquista</div> 
+                </button>
+            </div>
+        </div>
+            {# /CARD-1 #}
+
+            {# CARD-2 #}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body bg-black">
+                <h5 class="card-title">20€</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                    <div class="container">Acquista</div> 
+                </button>
+            </div>
+        </div>
+            {# /CARD-2 #}
+    </div>
+            {# /CARDS-CONTAINER #}
+</div>
+    
+
+ 
 
 {% endblock %}

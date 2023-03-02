@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PayerController!{% endblock %}
+
+{% block body %}
+{% include 'nav.html.twig' %}
+
+<div class="container vh-100 bg-black d-flex align-items-center justify-content-around">
+
+    {{ form_start(payerForm) }}
+        {{ form_row(payerForm.nome,
+        {label: 'Nome'})
+        }}
+        {{ form_row(payerForm.cognome,
+        {label: 'Cognome'})
+        }}
+        {{ form_row(payerForm.prezzo) }}
+
+        <button type="submit" class="btn">PAGA STRONZO</button>
+        
+
+    {{ form_end(payerForm) }}
+
+
+</div>
+{% endblock %}

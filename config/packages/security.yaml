@@ -34,12 +34,14 @@ security:
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/user, roles: ROLE_USER}
+        - { path: ^/pagamento, roles: ROLE_USER}
         - { path: ^/, roles: PUBLIC_ACCESS }
         - { path: ^/login, roles: PUBLIC_ACCESS }
         - { path: ^/register, roles: PUBLIC_ACCESS }
         - { path: ^/log/reg, roles: PUBLIC_ACCESS }
 
     role_hierarchy:
+        ROLE_SUPER_ADMIN: [ ROLE_ADMIN ]
         ROLE_ADMIN: [ ROLE_USER ]
 
 when@test:
