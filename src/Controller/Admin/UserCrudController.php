@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
@@ -44,4 +45,14 @@ class UserCrudController extends AbstractCrudController
             ->setUploadDir('public/uploads/avatars')
             ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]');
     }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return parent::configureCrud($crud)
+            ->setDefaultSort([
+                'createdAt' => 'DESC',
+                'roles'=> 'DESC',
+            ]);
+    }
+
 }

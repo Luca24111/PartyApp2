@@ -1,0 +1,48 @@
+.text-title {
+  color: white; }
+
+.vh {
+  height: 200vh; }
+
+.btn:hover {
+  color: #f2084e !important;
+  border-color: #f2084e !important; }
+
+.navbar-toggler {
+  border: none !important;
+  color: none !important;
+  box-sizing: none !important; }
+
+.btn-hamburger {
+  border: none !important;
+  color: none !important;
+  background-color: transparent !important; }
+
+.btn-close {
+  border: none !important;
+  color: none !important;
+  background-color: transparent !important; }
+
+.timer-container {
+  background-image: url(/assets/img/tracciati-neon.jpg); }
+
+.timer-box {
+  height: 100px;
+  width: 250px;
+  color: white; }
+
+.time-box {
+  height: 50px;
+  width: 50px; }
+
+h4 {
+  margin-bottom: 0% !important; }
+
+.card-title {
+  color: white !important; }
+
+.card-text {
+  color: white !important; }
+
+.text-color-button {
+  color: white !important; }
