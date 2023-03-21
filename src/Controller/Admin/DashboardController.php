@@ -7,7 +7,10 @@ use App\Entity\Answer;
 use App\Entity\Payer;
 use App\Entity\Topic;
 use App\Entity\User;
+use App\Repository\PayerRepository;
+use App\Repository\QuestionsRepository;
 use App\Repository\TopicRepository;
+use App\Repository\UserRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
@@ -31,7 +34,17 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         
-        return $this->render('admin/admin.html.twig');
+        $latestPayer = $this->payerRepository
+            ->findBy(
+                array('id'=>'ASC'),
+        );
+
+        return $this->render('admin/admin.html.twig', [
+            'latestPayer' => $latestPayer,
+            
+        ]);
+
+        
 
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
@@ -59,19 +72,29 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-dashboard');
-        yield MenuItem::linkToCrud('Questions', 'fa fa-question-circle', Questions::class);
+        // yield MenuItem::linkToCrud('Questions', 'fa fa-question-circle', Questions::class);
         // yield MenuItem::linkToCrud('Answers', 'fas fa-comments', Answer::class);
         // yield MenuItem::linkToCrud('Topics', 'fas fa-folder', Topic::class);
         yield MenuItem::linkToCrud('Users', 'fas fa-users', User::class);
+        // yield MenuItem::section('Content');
         yield MenuItem::linkToCrud('Payers', 'fas fa-dollar', Payer::class);
         yield MenuItem::linkToUrl('Homepage', 'fas fa-home', $this->generateUrl('app_home'));
+        // yield MenuItem::linkToUrl('StackOverflow', 'fab fa-stack-overflow', 'https://stackoverflow.com');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 
     public function configureActions(): Actions
     {
         return parent::configureActions()
-        ->add(Crud::PAGE_INDEX, Action::DETAIL);
+            ->add(Crud::PAGE_INDEX, Action::DETAIL)
+            ->setPermission(Action::EDIT, 'ROLE_SUPER_ADMIN')
+            ->update(Crud::PAGE_DETAIL, Action::EDIT, static function (Action $action) {
+                return $action->setIcon('fa fa-edit');
+            })
+            ->update(Crud::PAGE_DETAIL, Action::INDEX, static function (Action $action) {
+                return $action->setIcon('fa fa-list');
+            });
+            
     }
 
     public function configureUserMenu(UserInterface $user): UserMenu
@@ -87,7 +110,18 @@ class DashboardController extends AbstractDashboardController
         return parent::configureCrud()
             ->setDefaultSort([
                 'id' => 'DESC',
-            ]);
+            ])
+            ->overrideTemplate('crud/field/id', 'admin/field/id_icon.html.twig');
     }
 
+    private PayerRepository $payerRepository;
+    public function __construct(PayerRepository $payerRepository)
+    {
+        $this->payerRepository = $payerRepository;
+    } 
+    
+    
+
 }
+
+    

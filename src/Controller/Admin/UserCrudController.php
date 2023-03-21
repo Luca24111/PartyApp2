@@ -11,11 +11,13 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Mime\Email;
 
 class UserCrudController extends AbstractCrudController
 {
@@ -28,7 +30,8 @@ class UserCrudController extends AbstractCrudController
     {
         yield Field::new('id')
             ->onlyOnIndex();
-        yield EmailField::new('email');
+        yield EmailField::new('email')
+            ->setPermission('ROLE_SUPER_ADMIN');
         yield Field::new('nome')
             ->hideOnForm();
         yield Field::new('cognome');
@@ -44,6 +47,15 @@ class UserCrudController extends AbstractCrudController
             ->setBasePath('uploads/avatars')
             ->setUploadDir('public/uploads/avatars')
             ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]');
+        yield TextEditorField::new('avatar');
+
+        
+        yield FormField::addPanel('Basic Data')
+            ->collapsible();
+        yield Field::new('nome')
+            ->hideOnForm();
+        yield Field::new('cognome');
+            
     }
 
     public function configureCrud(Crud $crud): Crud
@@ -54,5 +66,7 @@ class UserCrudController extends AbstractCrudController
                 'roles'=> 'DESC',
             ]);
     }
+
+
 
 }

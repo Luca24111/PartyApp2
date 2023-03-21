@@ -1,1 +1,28 @@
 {% extends '@EasyAdmin/page/content.html.twig' %}
+
+
+{% block main %}
+    <div class="row">
+        <div class="col-6">
+            <h3>Latest Questions</h3>
+            <ol>
+                {% for payer in latestPayer %}
+                    <li>
+                        <a href="{{ path('app_payer_show', {'slug': payer.slug}) }}">{{ payer.nome }}</a>
+                        <br>- {{ payer.createdAt|date }}
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="col-6">
+            <h3>Top Voted</h3>
+            <ol>
+                {% for payer in latestPayer %}
+                    <li>
+                        <a href="{{ path('app_payer_show', {'slug': payer.slug}) }}">{{ payer.nome }}</a> ({{ payer.id }})
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+{% endblock %}

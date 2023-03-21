@@ -7,6 +7,13 @@
     height: 200vh;
 }
 
+.titolo{
+    height: 150px;
+    width: 200px;
+}
+
+// NAVBAR
+
 .btn:hover{
     color: rgb(242, 8, 78) !important;
     border-color: rgb(242, 8, 78) !important;
@@ -20,7 +27,7 @@
 
 .btn-hamburger{
     border: none !important;
-    color:none !important;
+    color:white !important;
     background-color: transparent !important;
 
 }
@@ -29,24 +36,67 @@
     border: none !important;
     color:none !important;
     background-color: transparent !important;
+}   
+
+// HOME
+
+.home-container{
+    background-image: url(/assets/img/tracciati-neon.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.timer-container{
-    background-image: url(/assets/img/tracciati-neon.jpg);
+.row-box{
+    max-width: 100%;
+    height: auto;
+}
+
+.info-title{
+    font-size: 100px;
+    color: white;
+}
+
+.info-box{
+    height: 400px;
+    width: 400px;
+
+}
+
+.text-box{
+    color: white;
+    font-size: 30px;
+}
+
+.btn-info{
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 5px;
+}
+
+.animation-box{
+    height: 400px;
+    width: 400px;
+
+    background-color: red;
 }
 
 .timer-box{
     height: 100px;
     width: 250px;
-    color: white;
+    color: rgb(255, 0, 0);
     
 }
 
 .time-box{
     height: 50px;
     width: 50px;
-    
+    color: rgb(255, 255, 255);
+    font-size: 25px;
 }
+
+
+
 
 h4{
     margin-bottom: 0%!important;

@@ -3,6 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Payer;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class PayerCrudController extends AbstractCrudController
@@ -11,6 +14,9 @@ class PayerCrudController extends AbstractCrudController
     {
         return Payer::class;
     }
+
+
+
 
     /*
     public function configureFields(string $pageName): iterable

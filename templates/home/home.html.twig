@@ -4,10 +4,108 @@
 
 {% block body %}
 {% include 'nav.html.twig' %}
- <div class="container-fluid vh bg-black">
 
+    
+   
+  
+
+
+            {#  HOME-CONTAINER #}
+    <div class="home-container">
+        <div class="row vh-100 d-flex align-items-center justify-content-around">
+
+            <div class="info-box col-12 col-md-5">
+
+                    {# INFOBOX-START #}
+
+                <div class="title-box">
+                    <h2 class="info-title">COMING SOON...</h2>
+                </div>
+
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisci</p>
+                </div>
+                
+                <div class="timer-box d-flex align-items-center justify-content-around">
+                    <div class="time-box text-center">
+                        <h4>00</h4>
+                        <p>Giorni</p>
+                    </div>
+                    <div class="time-box text-center">
+                        <h4>00</h4>
+                        <p>Ore</p>
+                    </div>
+                    <div class="time-box text-center">
+                        <h4>00</h4>
+                        <p>Minuti</p>
+                    </div>
+                </div>
+
+                <div class="botton-box d-flex">
+
+                    <button class="btn-info text-center d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                        <div class="container py-2">Acquista</div> 
+                    </button>
+
+                    <button class="btn-info text-center d-flex text-color-button ms-3" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                        <div class="container py-2">Acquista</div> 
+                    </button>
+
+                </div>
+
+            </div>
+
+                    {# INFOBOX-END #}
+
+            <div class="animation-box col-12 col-md-5">
+
+
+            </div>
+
+        </div>
+    </div>
             {# TIMER-CONTAINER #}
-    <div class="timer-container d-flex">
+
+            {# CARDS-CONTAINER #}
+    {# <div class="card-container d-flex align-items-center justify-content-around"> #}
+
+            {# CARD-1 #}
+        {# <div class="card" style="width: 18rem;">
+            <div class="card-body bg-black">
+                <h5 class="card-title">15€</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                    <div class="container">Acquista</div> 
+                </button>
+            </div>
+        </div> #}
+            {# /CARD-1 #}
+
+            {# CARD-2 #}
+        {# <div class="card" style="width: 18rem;">
+            <div class="card-body bg-black">
+                <h5 class="card-title">20€</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
+                    <div class="container">Acquista</div> 
+                </button>
+            </div>
+        </div> #}
+            {# /CARD-2 #}
+    {# </div> #}
+            {# /CARDS-CONTAINER #}
+
+
+
+    
+
+ 
+
+{% endblock %}
+
+
+
+        {# <div class="titolo bg-white"></div>
         <div class="timer-box d-flex align-items-center justify-content-around">
             <div class="time-box text-center">
                 <h4>00</h4>
@@ -21,41 +119,4 @@
                 <h4>00</h4>
                 <p>Minuti</p>
             </div>
-        </div>
-    </div>
-            {# TIMER-CONTAINER #}
-
-            {# CARDS-CONTAINER #}
-    <div class="card-container d-flex align-items-center justify-content-around">
-
-            {# CARD-1 #}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body bg-black">
-                <h5 class="card-title">15€</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                    <div class="container">Acquista</div> 
-                </button>
-            </div>
-        </div>
-            {# /CARD-1 #}
-
-            {# CARD-2 #}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body bg-black">
-                <h5 class="card-title">20€</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                    <div class="container">Acquista</div> 
-                </button>
-            </div>
-        </div>
-            {# /CARD-2 #}
-    </div>
-            {# /CARDS-CONTAINER #}
-</div>
-    
-
- 
-
-{% endblock %}
+        </div>#}
