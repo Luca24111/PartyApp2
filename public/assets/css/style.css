@@ -28,7 +28,7 @@
   background-color: transparent !important; }
 
 .home-container {
-  background-image: url(/assets/img/tracciati-neon.jpg);
+  background-image: url(assets/img/sfondo-dj.jpg);
   background-repeat: no-repeat;
   height: 100vh; }
 
@@ -58,6 +58,9 @@
   height: 400px;
   width: 400px;
   background-color: red; }
+
+.title-box {
+  width: 900px; }
 
 .timer-box {
   height: 100px;

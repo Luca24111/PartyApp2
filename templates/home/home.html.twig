@@ -12,9 +12,9 @@
 
             {#  HOME-CONTAINER #}
     <div class="home-container">
-        <div class="row vh-100 d-flex align-items-center justify-content-around">
+        <div class="row vh-100 d-flex align-items-center justify-content-start ms-5">
 
-            <div class="info-box col-12 col-md-5">
+            <div class="info-box col-12 col-md-7">
 
                     {# INFOBOX-START #}
 
@@ -42,25 +42,26 @@
                 </div>
 
                 <div class="botton-box d-flex">
-
+                    {% if app.user %}
+                    
                     <button class="btn-info text-center d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
                         <div class="container py-2">Acquista</div> 
                     </button>
 
-                    <button class="btn-info text-center d-flex text-color-button ms-3" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                        <div class="container py-2">Acquista</div> 
+                    {% else %}
+                    <button class="btn-info text-center d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/login'">
+                        <div class="container py-2">Accedi</div> 
                     </button>
 
+                    <button class="btn-info text-center d-flex text-color-button ms-3" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
+                        <div class="container py-2">Registrati</div> 
+                    </button>
+                    {% endif %}
                 </div>
 
             </div>
 
                     {# INFOBOX-END #}
-
-            <div class="animation-box col-12 col-md-5">
-
-
-            </div>
 
         </div>
     </div>

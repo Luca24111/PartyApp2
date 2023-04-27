@@ -28,7 +28,7 @@ exports.gulpSass = gulpSass;
 
 exports.gulpImage = gulpImage;
 
-var build = gulp.series(gulpSass, gulpImage);
+var build = gulp.series(gulpSass);
 
 gulp.task('images', gulpImage);
 
