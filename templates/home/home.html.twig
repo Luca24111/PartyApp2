@@ -3,98 +3,114 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-{% include 'nav.html.twig' %}
+
 
     
    
   
 
-
+    {% include 'nav.html.twig' %}
             {#  HOME-CONTAINER #}
-    <div class="home-container">
+    <div class="home-container watch">
+    <div class="container-fluid">
         <div class="row vh-100 d-flex align-items-center justify-content-start ms-5">
-
-            <div class="info-box col-12 col-md-7">
+        
+            <div class="info-box col-12 col-md-6">
 
                     {# INFOBOX-START #}
 
-                <div class="title-box">
-                    <h2 class="info-title">COMING SOON...</h2>
+                <div class="title-box drop-in">
+                    <h2 class="info-title header drop-in">COMING SOON...</h2>
                 </div>
 
-                <div class="text-box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisci</p>
+                <div class="text-box drop-in-2 ">
+                    <p class="mx-0" style="margin-bottom: 0;">Lorem ipsum dolor sit amet consectetur adipisicing</p>
                 </div>
                 
-                <div class="timer-box d-flex align-items-center justify-content-around">
+                <div class="timer-box d-flex align-items-center justify-content-around drop-in-3">
                     <div class="time-box text-center">
-                        <h4>00</h4>
-                        <p>Giorni</p>
+                        <p class="timer-number">00</p>
+                        <p class="timer-text">d</p>
                     </div>
-                    <div class="time-box text-center">
-                        <h4>00</h4>
-                        <p>Ore</p>
+                    <div class="time-box text-center m-4">
+                        <p class="timer-number">00</p>
+                        <p class="timer-text">h</p>
                     </div>
-                    <div class="time-box text-center">
-                        <h4>00</h4>
-                        <p>Minuti</p>
+                    <div class="time-box text-center m-1">
+                        <p class="timer-number">00</p>
+                        <p class="timer-text">m</p>
+                    </div>
+                    <div class="time-box text-center m-4">
+                        <p class="timer-number">00</p>
+                        <p class="timer-text">s</p>
                     </div>
                 </div>
 
-                <div class="botton-box d-flex">
+                <div class="botton-box d-flex drop-in-4 mt-4">
                     {% if app.user %}
-                    
-                    <button class="btn-info text-center d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                        <div class="container py-2">Acquista</div> 
-                    </button>
-
+    
                     {% else %}
-                    <button class="btn-info text-center d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/login'">
-                        <div class="container py-2">Accedi</div> 
-                    </button>
+                    <a href="" class="btn-home">Accedi</a>
 
-                    <button class="btn-info text-center d-flex text-color-button ms-3" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
-                        <div class="container py-2">Registrati</div> 
-                    </button>
+                    <a href="" class="btn-home">Registrati</a>
                     {% endif %}
                 </div>
 
             </div>
-
-                    {# INFOBOX-END #}
-
         </div>
     </div>
-            {# TIMER-CONTAINER #}
-
-            {# CARDS-CONTAINER #}
-    {# <div class="card-container d-flex align-items-center justify-content-around"> #}
-
-            {# CARD-1 #}
-        {# <div class="card" style="width: 18rem;">
-            <div class="card-body bg-black">
-                <h5 class="card-title">15€</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                    <div class="container">Acquista</div> 
-                </button>
+        
+    <div class="home-container-2 watch">
+        <div class="container-fluid">
+            <div class="row d-flex vh-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img" src="/assets/img/drink.png" alt="">
+                        <h3 class="text-center">15€</h3>
+                        <ul>
+                            <li>
+                                <p>Accesso alla festa</p>
+                            </li>
+                            <li>
+                                <p>1 Drink</p>
+                            </li>
+                            <li>
+                                <p>1 Shot</p>
+                            </li>
+                        </ul>
+                        <a href="" class="card-btn">Acquista</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img" src="/assets/img/drink.png" alt="">
+                        <h3 class="text-center">20€</h3>
+                        <ul>
+                            <li>
+                                <p>Accesso alla festa</p>
+                            </li>
+                            <li>
+                                <p>1 Drink</p>
+                            </li>
+                            <li>
+                                <p>1 Shot</p>
+                            </li>
+                        </ul>
+                        <a href="" class="card-btn">Acquista</a>
+                    </div> 
+                </div>
             </div>
-        </div> #}
-            {# /CARD-1 #}
+         </div>
+    </div>
+   
+<script>
 
-            {# CARD-2 #}
-        {# <div class="card" style="width: 18rem;">
-            <div class="card-body bg-black">
-                <h5 class="card-title">20€</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn text-center container-fluid d-flex text-color-button" type="button"onclick="location.href='http://party_app.copiaincolla/pagamento'">
-                    <div class="container">Acquista</div> 
-                </button>
-            </div>
-        </div> #}
-            {# /CARD-2 #}
-    {# </div> #}
-            {# /CARDS-CONTAINER #}
+
+
+
+</script>
+    
+            
 
 
 
@@ -106,18 +122,4 @@
 
 
 
-        {# <div class="titolo bg-white"></div>
-        <div class="timer-box d-flex align-items-center justify-content-around">
-            <div class="time-box text-center">
-                <h4>00</h4>
-                <p>Giorni</p>
-            </div>
-            <div class="time-box text-center">
-                <h4>00</h4>
-                <p>Ore</p>
-            </div>
-            <div class="time-box text-center">
-                <h4>00</h4>
-                <p>Minuti</p>
-            </div>
-        </div>#}
+        

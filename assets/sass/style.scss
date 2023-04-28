@@ -14,6 +14,10 @@
 
 // NAVBAR
 
+.btn{
+    color: white !important;
+}
+
 .btn:hover{
     color: rgb(242, 8, 78) !important;
     border-color: rgb(242, 8, 78) !important;
@@ -36,13 +40,22 @@
     border: none !important;
     color:none !important;
     background-color: transparent !important;
-}   
+}
+
+.offcanvas{
+    background-color: rgba(0, 0, 0, 0.796)!important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14)!important;
+    
+}
 
 // HOME
 
 .home-container{
-    background-image: url(assets/img/sfondo-dj.jpg);
+    background-image: url(/assets/img/sfondo-dj.jpg);
+    background-color: black;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
     height: 100vh;
 }
 
@@ -51,15 +64,18 @@
     height: auto;
 }
 
-.info-title{
-    font-size: 100px;
-    color: white;
-}
-
 .info-box{
     height: 400px;
     width: 400px;
+    
+}
 
+.title-box{
+    width: 100%;
+}
+.info-title{
+    font-size: 80px;
+    color: white;
 }
 
 .text-box{
@@ -67,53 +83,169 @@
     font-size: 30px;
 }
 
-.btn-info{
-    color: white;
-    background-color: transparent;
-    border-color: white;
-    border-radius: 5px;
-}
-
-.animation-box{
-    height: 400px;
-    width: 400px;
-
-    background-color: red;
-}
-
-.title-box{
-    width: 900px;
-}
 
 .timer-box{
     height: 100px;
     width: 250px;
-    color: rgb(255, 0, 0);
-    
+    color: rgb(255, 0, 0);  
 }
 
 .time-box{
     height: 50px;
     width: 50px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 25px;
 }
-
-
-
-
-h4{
-    margin-bottom: 0%!important;
+.timer-number{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: x-large;
+    font-weight: normal;
 }
 
-.card-title{
-    color: white !important;
+.overflow-hidden {
+    overflow: hidden;
+   }
+   .drop-in {
+    animation: drop-in 1200ms ease 200ms backwards;
+   }
+   
+   .drop-in-2 {
+    animation: drop-in 1200ms ease 800ms backwards;
+    
+   }
+
+   .drop-in-3 {
+    animation: drop-in 1200ms ease 1600ms backwards;
+   }
+   .drop-in-4 {
+    animation: drop-in 1200ms ease 2500ms backwards;
+   }
+   
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
+
+
+
+
+.btn-home{
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.566);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: background-color 0.4s;
+    color: 0.4s;
+    
+
 }
 
-.card-text{
-    color: white !important;
+.btn-home:hover{
+    background-color: white;
+    color: rgb(0, 0, 0);
 }
 
-.text-color-button{
-    color: white !important;
+
+
+// HOME CONATINER 2
+
+
+.home-container-2{
+    background-image: url(/assets/img/sfondo-bicchieri.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    
+    
 }
+
+.card{
+    padding: 30px !important;
+    border-radius: 10px !important;
+    background-color: rgba(255, 255, 255, 0.13)!important; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.334)!important;
+    color: rgb(255, 255, 255);
+    will-change: transform;
+    transition: transform 0.6s;
+
+    
+    
+}
+
+.card:hover{
+    transform: scale(1.1)!important;
+    transition: transform 0.6s!important;
+}
+
+
+.card-btn{
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.566);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: background-color 0.4s;
+    color: 0.4s;
+}
+
+.card-btn:hover{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.card-btn::after,
+.card-btn::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.13);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14)!important;
+    border-radius: 10px;
+   
+}
+
+.card-btn::after{
+    top: -20px;
+    left: -20px;
+}
+
+.card-btn::before{
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: -30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)!important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
