@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-dark shadow-5-strong fixed-top ">
-  <div class="container-fluid ">
+<nav class="navbar navbar-dark fixed-top">
+  <div class="container-fluid">
     <i class="fa-brands fa-slack fa-xl"></i>
     <a class="navbar-brand text-center" href="#">PartyApp</a>
 
@@ -68,6 +68,20 @@
         
   </div>
 </nav>
+
+<script>
+
+     const nav = document.querySelector('.navbar')
+
+     window.addEventListener('scroll', () => {
+        if (window.scrollY >= 56) {
+          nav.classList.add('navbar-scrolled');
+        } else if (window.scrollY < 56 ) {
+          nav.classList.remove('navbar-scrolled');
+        }
+     });
+    
+</script>
 
 
 

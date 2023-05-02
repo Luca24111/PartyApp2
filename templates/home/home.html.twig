@@ -11,7 +11,7 @@
 
     {% include 'nav.html.twig' %}
             {#  HOME-CONTAINER #}
-    <div class="home-container watch">
+    <div class="home-container">
     <div class="container-fluid">
         <div class="row vh-100 d-flex align-items-center justify-content-start ms-5">
         
@@ -27,7 +27,7 @@
                     <p class="mx-0" style="margin-bottom: 0;">Lorem ipsum dolor sit amet consectetur adipisicing</p>
                 </div>
                 
-                <div class="timer-box d-flex align-items-center justify-content-around drop-in-3">
+                <div class="timer-box d-flex align-items-center justify-content-around drop-in-3 ">
                     <div class="time-box text-center">
                         <p class="timer-number">00</p>
                         <p class="timer-text">d</p>
@@ -45,26 +45,16 @@
                         <p class="timer-text">s</p>
                     </div>
                 </div>
-
-                <div class="botton-box d-flex drop-in-4 mt-4">
-                    {% if app.user %}
-    
-                    {% else %}
-                    <a href="" class="btn-home">Accedi</a>
-
-                    <a href="" class="btn-home">Registrati</a>
-                    {% endif %}
-                </div>
-
             </div>
         </div>
     </div>
         
-    <div class="home-container-2 watch">
+    <div class="home-container-2">
         <div class="container-fluid">
-            <div class="row d-flex vh-100 align-items-center justify-content-center">
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-                    <div class="card" style="width: 18rem;">
+            <div class="row d-flex vh-100 align-items-start justify-content-center">
+            <h2 class="info-title text-center mt-5">SHOP</h2>
+                <div class="col-12 col-md-6 d-flex align-items-start justify-content-center">
+                    <div class="card mt-5">
                         <img class="img" src="/assets/img/drink.png" alt="">
                         <h3 class="text-center">15€</h3>
                         <ul>
@@ -81,8 +71,8 @@
                         <a href="" class="card-btn">Acquista</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-12 col-md-6 d-flex align-items-start justify-content-center">
+                    <div class="card mt-5">
                         <img class="img" src="/assets/img/drink.png" alt="">
                         <h3 class="text-center">20€</h3>
                         <ul>

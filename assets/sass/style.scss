@@ -13,6 +13,13 @@
 }
 
 // NAVBAR
+.navbar{
+    transition: all 0.5s ;
+}
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.334);
+}
 
 .btn{
     color: white !important;
@@ -25,7 +32,6 @@
 
 .navbar-toggler{
     border: none !important;
-    color:none !important;
     box-sizing: none !important;
 }
 
@@ -38,7 +44,7 @@
 
 .btn-close{
     border: none !important;
-    color:none !important;
+    color:white !important;
     background-color: transparent !important;
 }
 
@@ -162,15 +168,72 @@
 
 
 .home-container-2{
-    background-image: url(/assets/img/sfondo-bicchieri.jpg);
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
+    background-image: url(/assets/img/sfondo-bicchieri.jpg);
     height: 100vh;
     
     
 }
+
+@media screen and (max-width: 765px ) {
+    .home-container-2{
+        height: 150vh;
+
+    }
+}
+
+@media screen and (max-width: 450px ) {
+    .home-container-2{
+        height: 130vh;
+
+    }
+}
+
+@media screen and (max-width: 415px) and (min-width: 400px) {
+    .home-container-2{
+        height: 150vh;
+
+    }
+  }
+
+@media screen and (max-width: 400px ) {
+    .home-container-2{
+        height: 150vh;
+
+    }
+}
+
+@media screen and (max-height: 800px ) {
+    .home-container-2{
+        height: 160vh;
+
+    }
+}
+
+@media screen and (max-height: 750px) and (min-height: 690px) {
+    .home-container-2{
+        height: 175vh;
+
+    }
+  }
+
+@media screen and (max-height: 690px ) {
+    .home-container-2{
+        height: 200vh;
+
+    }
+}
+
+@media screen and (max-height: 600px ) {
+    .home-container-2{
+        height: 225vh;
+
+    }
+}
+
 
 .card{
     padding: 30px !important;
@@ -180,6 +243,7 @@
     color: rgb(255, 255, 255);
     will-change: transform;
     transition: transform 0.6s;
+    width: 18rem;
 
     
     
@@ -232,6 +296,14 @@
     right: -30px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)!important;
 
+}
+
+@media screen and (max-width: 450px ) {
+    .card{
+        width: 15rem;
+
+    }
+    
 }
 
 
