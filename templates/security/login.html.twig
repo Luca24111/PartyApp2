@@ -4,38 +4,38 @@
 
 {% block body %}
 
-
-<div class="form-box">
-    <div class="form-value">
-        <form method="post">
-        <h2>Login</h2>
-        <div class="inputbox">
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-            <label for="inputEmail">Email</label>
-        </div>
-        <div class="inputbox">
-            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-            <label for="inputPassword">Password</label>
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-        </div>
-            <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
-            <button class="btn btn-primary text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
-                <div class="container">Registrati</div> 
-            </button>
-        </form>
+<div class="home-container-2">
+    <div class="container-fluid">
+        <div class="row vh-100 position-relative"> 
+            <h2 class="text-center login-title position-absolute top-50 start-50 translate-middle">LOGIN</h2>
+            <div class="container-form position-absolute top-50 start-50 translate-middle">
+                <div class="form-box mt-5">
+                    <div class="form-value">
+                        <form method="post" class="ms-4">
+                            <div class="inputbox mt-3">
+                                <label for="inputEmail" class="text-light" >Email</label>
+                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="input" autocomplete="email" placeholder="email" required autofocus>
+                            </div>
+                            <div class="inputbox mt-3">
+                                <label for="inputPassword" class="text-light">Password</label>
+                                <input type="password" name="password" id="inputPassword" class="input" placeholder="password" autocomplete="current-password" required>
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            </div>
+                            <div class="d-grid gap-2 mt-3 me-5">
+                                <button class="btn-form" type="submit">Accedi</button>
+                                <button class="btn-form" type="button" onclick="location.href='http://party_app.copiaincolla/register'">Registrati</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </div>
 
-
-
-
-
-
-
-
 {% endblock %}
 
-
+{# class="form-control" #}
 
     {# {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -71,3 +71,36 @@
     <button class="btn btn-primary text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
         <div class="container">Registrati</div> 
     </button> #}
+
+    {# <div class="form-box">
+    <div class="form-value">
+        <form method="post">
+        <h2>Login</h2>
+        <div class="inputbox">
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+            <label for="inputEmail">Email</label>
+        </div>
+        <div class="inputbox">
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            <label for="inputPassword">Password</label>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        </div>
+            <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+            <button class="btn btn-primary text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/register'">
+                <div class="container">Registrati</div> 
+            </button>
+        </form>
+    </div>
+</div> #}
+
+
+
+
+
+
+
+
+
+
+
+{#  #}

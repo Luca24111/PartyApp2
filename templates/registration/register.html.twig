@@ -3,9 +3,41 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<div class="home-container-2">
+    <div class="container-fluid">
+        <div class="row vh-100 position-relative"> 
+            <h2 class="text-center login-title position-absolute top-50 start-50 translate-middle">REGISTER</h2>
+            <div class="container-form position-absolute top-50 start-50 translate-middle">
+                <div class="form-box mt-2">
+                    <div class="form-value">
+                    {{ form_start(registrationForm) }}
+                        {{ form_row(registrationForm.email, {'attr': {'class': 'input'}}) }}
+                        {{ form_row(registrationForm.plainPassword, {'attr': {'class': 'input'}})}}
+                        {{ form_row(registrationForm.nome, {'attr': {'class': 'input'}})}}
+                        {{ form_row(registrationForm.cognome, {'attr': {'class': 'input'}})}}
+                        {{ form_row(registrationForm.agreeTerms) }}
+        
 
-    {{ form_start(registrationForm) }}
+                        <button type="submit" class="btn">Register</button>
+                        
+                        <button class="btn btn-primary text-center d-flex" type="button"onclick="location.href='http://party_app.copiaincolla/login'">
+                            <i class="fa-solid fa-right-to-bracket pt-1 ps-2"></i>
+                            <div class="container">Accedi</div> 
+                        </button>
+                    {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+    
+{% endblock %}
+
+
+{# {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, 
         {label: 'Password'})
@@ -25,5 +57,6 @@
             <i class="fa-solid fa-right-to-bracket pt-1 ps-2"></i>
             <div class="container">Accedi</div> 
         </button>
-    {{ form_end(registrationForm) }}
-{% endblock %}
+{{ form_end(registrationForm) }} #}
+
+
